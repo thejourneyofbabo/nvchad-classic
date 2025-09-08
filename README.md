@@ -7,3 +7,6 @@
 # Credits
 
 1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+
+# Install
+`git clone https://github.com/NvChad/starter](https://github.com/thejourneyofbabo/nvchad-classic ~/.config/nvim && nvim`
