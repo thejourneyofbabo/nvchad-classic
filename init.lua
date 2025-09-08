@@ -1,6 +1,9 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+-- Add cargo to PATH for Rust debugging
+vim.env.PATH = vim.env.HOME .. "/.cargo/bin:" .. vim.env.PATH
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
