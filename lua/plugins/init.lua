@@ -55,6 +55,15 @@ return {
     end,
   },
 
+  -- Mananging crates.io dependencies
+{
+    'saecki/crates.nvim',
+    event = { "BufRead Cargo.toml" },
+    config = function()
+        require('crates').setup()
+    end,
+},
+
   -- Debug Adapter Protocol (DAP) Configuration
   {
     "mfussenegger/nvim-dap",
