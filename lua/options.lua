@@ -5,15 +5,16 @@ require "nvchad.options"
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
--- OSC 52 clipboard for Docker/SSH environments
+-- xclip clipboard
 vim.g.clipboard = {
-  name = 'OSC 52',
+  name = 'xclip',
   copy = {
-    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    ['+'] = 'xclip -selection clipboard',
+    ['*'] = 'xclip -selection primary',
   },
   paste = {
-    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    ['+'] = 'xclip -selection clipboard -o',
+    ['*'] = 'xclip -selection primary -o',
   },
+  cache_enabled = 0,
 }
